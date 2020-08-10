@@ -1,0 +1,135 @@
+<?php
+  $json_string = file_get_contents("data.json");
+  $row = json_decode($json_string,true);
+  $IP = $row['network'];
+  $ID = $row['user'];
+  $PASSWORD = $row['password'];
+  $DATABASE = $row['database'];
+  $PORT = $row['port'];
+  $conn = mysqli_connect($IP,$ID,$PASSWORD,$DATABASE,$PORT);
+  $sql = "select server_count from YBOT";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  $guild_count = $row['server_count'];
+  mysqli_close($conn);
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YBOT</title>
+
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #7289da;">
+      <a class="navbar-brand" href="/">
+        <img src="static/img/YBOT.png" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+        <span class="nav_main">YBOT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item activen">
+            <a class="nav-link active" href="#">홈<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " onclick="alert('준비중입니다!');">대시보드</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              도움말
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">검색</a>
+              <a class="dropdown-item" href="#">전적</a>
+              <a class="dropdown-item" href="#">미니게임</a>
+              <a class="dropdown-item" href="#">이모지</a>
+              <a class="dropdown-item" href="#">관리</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="invite.html">초대하기</a>
+          </li>
+        </ul>
+      </div>
+      <span class="nav_text" id="navbarNav">
+        <a href="forum">
+          <img src="static/img/icon/discord.png" height="30">
+        </a>
+      </span>
+    </nav>
+    <div class="main">
+      <div class="topic">
+        <h1 style="font-weight: bold;">
+          <?php
+          echo $guild_count;
+          ?> 서버가 이용중인 YBOT봇<br>
+        </h1>
+        <h5>YBOT은 "게임","검색","전적" 기능을 하나로 합친 봇입니다. 굳이 여러 봇을 초대할 필요 없이 YBOT 하나로 즐길수 있도록 하는것이 목적입니다.</h5>
+      </div>
+
+      <div class="dividers"></div>
+
+      <div class="grid main" style="color:white;">
+        <div>
+          <h4 class="about_main">더욱 즐겁게 사용자와 경쟁해보세요!</h4>
+          <p class="adout_description">YBOT을 통하여 다른 유저와 경쟁을 펼쳐보세요! 조만간 추가되는 돈 기능부터, 타자, 넌센스 기능까지 여러분들에게 경쟁의 재미를 보여드리죠!</p>
+        </div>
+        <div>
+          <img src="static/img/information/minigame.gif" class="about_img">
+        </div>
+      </div>
+      <div class="dividers"></div>
+      <div class="grid main" style="color:white;">
+        <div>
+          <img src="static/img/information/lol.png" class="about_img">
+        </div>
+        <div>
+          <h4 class="about_main">다양한 게임의 전적을 알아보세요!</h4>
+          <p class="adout_description">YBOT을 리그오브레전드, 배틀그라운드, 오버워치, 마인크래프트, 하이픽셀 서버, 브롤스타즈, 클래시로얄등의 전적을 보다 쉽게 얻을수 있습니다. 디스코드에서 쉽게 전적을 검색해보세요!</p>
+        </div>
+      </div>
+      <div class="dividers"></div>
+      <div class="grid main" style="color:white;">
+        <div>
+          <h4 class="about_main">다양한 검색 기능을 이용해보세요!!</h4>
+          <p class="adout_description">YBOT을 통하여 택배정보, 날씨 정보, 한강 수온, 급식 정보등 다양한 정보를 보다 쉽게 얻을수 있습니다! 지금 한번 "=help 검색"을 이용하여 검색할수 있는 다양한 정보들을 알아보세요!</p>
+        </div>
+        <div>
+          <img src="static/img/information/hangang.png" class="about_img">
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      © 2020 건유1019#0001 All right reserved. |
+      <a href="/terms">이용약관</a> |
+      <a href="/privacy">개인정보 처리방침</a><br>
+      <a href="mailtto:support@yhs.kr">
+        <img src='static/img/icon/email.png' height=20px>
+        <span>이메일</span>
+      </a> |
+      <a href="https://github.com/Team-Developer-Space">
+        <img src='static/img/icon/github.png' height=20px>
+        <span>깃허브</span>
+      </a> |
+      <a href="https://blog.yonghyeon.com/">
+        <img src='static/img/icon/tistory.png' height=20px>
+        <span>블로그</span>
+      </a>
+      <?php
+        if(isset($_GET['hello'])){
+          if($_GET['hello'] == 'world'){
+            echo "| EASTER_EGG";
+          }
+        }
+      ?>
+    </footer>
+  </body>
+</html>
