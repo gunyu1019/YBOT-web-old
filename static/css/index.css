@@ -20,35 +20,17 @@ body{
   padding: 150px 75px 150px 75px;
 }
 
-@media(max-width:992px){
-  .collapse.not.show{
-    display: block;
-  }
-}
-@media(overflow-block : scroll) {
-  #footer {
-    width:100%;
-    position:absolute;
-    bottom:0;
-  }
-}
-
 #footer {
   border: 0px solid;
   text-align: center;
   color: white;
-  background-color: #404040;
+  background-color: #303030;
   padding-bottom: 80px;
   padding-top: 40px;
 }
 
 #footer a{
   color: white;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .about_main{
@@ -67,4 +49,93 @@ body{
   border-top: 3px solid #404040;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#btn{
+  font-size:20px;
+  font-weight: bold;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration:none
+}
+
+.vote_ad{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.vote_description{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#btn:hover{
+  color: #aaaaaa;
+  box-shadow: 1px 3px 0px 0px gray;
+}
+
+.btn1{
+  background-color: #0080ff;
+  padding: 5px 100px 5px 100px;
+}
+
+.btn2{
+  background-color: #7289DA;
+  padding: 5px 50px 5px 50px;
+}
+
+.btn3{
+  background-color: #2C2F33;
+  padding: 5px 50px 5px 50px;
+}
+
+.btn4{
+  background-color: #2f3136;
+  padding: 5px 50px 5px 50px;
+}
+
+.btn5{
+  background-color: #808080;
+  padding: 5px 100px 5px 100px;
+}
+
+@media (max-width:1020px){
+  .collapse.not.show {
+    display: block;
+  }
+
+  .agent-moblie{
+    display: block;
+  }
+
+  .agent-pc{
+    display: none;
+  }
+}
+
+@media (min-width:1020px){
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .agent-moblie{
+    display: none;
+  }
+
+  .agent-pc{
+    display: block;
+  }
+}
+
+@media (overflow-block: scroll) {
+  #footer {
+    width:100%;
+    position:absolute;
+    bottom:0;
+  }
 }
