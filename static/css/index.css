@@ -32,10 +32,6 @@ body{
   font-weight: bold;
 }
 
-.adout_description{
-  margin-right:100px;
-}
-
 .about_img{
   max-width: 100%;
 }
@@ -138,6 +134,10 @@ body{
   .main{
     padding-left: 75px;
     padding-right: 75px;
+  }
+
+  .adout_description{
+    margin-right:100px;
   }
 }
 
