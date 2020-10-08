@@ -8,11 +8,6 @@ body{
   background-color: #36393f;
 }
 
-.main{
-  padding-left: 75px;
-  padding-right: 75px;
-}
-
 .topic{
   text-align: center;
   font-weight: bold;
@@ -108,12 +103,21 @@ body{
     display: block;
   }
 
+  .grid {
+    text-align: center;
+  }
+
   .agent-moblie{
     display: block;
   }
 
   .agent-pc{
     display: none;
+  }
+  
+  .main{
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -129,6 +133,11 @@ body{
 
   .agent-pc{
     display: block;
+  }
+
+  .main{
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }
 
