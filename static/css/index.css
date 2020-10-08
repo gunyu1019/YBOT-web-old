@@ -12,7 +12,6 @@ body{
   text-align: center;
   font-weight: bold;
   color: white;
-  padding: 150px 75px 150px 75px;
 }
 
 #footer {
@@ -71,7 +70,6 @@ body{
 
 .btn1{
   background-color: #0080ff;
-  padding: 5px 100px 5px 100px;
 }
 
 .btn2{
@@ -91,7 +89,6 @@ body{
 
 .btn5{
   background-color: #808080;
-  padding: 5px 100px 5px 100px;
 }
 
 @media (max-width:1020px){
@@ -114,6 +111,18 @@ body{
   .main{
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .btn1{
+    padding: 5px 50px 5px 50px;
+  }
+
+  .btn5{
+    padding: 5px 50px 5px 50px;
+  }
+
+  .topic{
+    padding: 100px 25px 100px 25px;
   }
 }
 
@@ -138,6 +147,18 @@ body{
 
   .adout_description{
     margin-right:100px;
+  }
+
+  .btn1{
+    padding: 5px 100px 5px 100px;
+  }
+
+  .btn5{
+    padding: 5px 100px 5px 100px;
+  }
+  
+  .topic{
+    padding: 150px 75px 150px 75px;
   }
 }
 
