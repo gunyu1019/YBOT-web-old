@@ -1,3 +1,8 @@
+@import url("/static/font/Nanum_Gothic/Nanum_Gothic-Regular.ttf");
+@import url("/static/font/Noto_Sans_KR/Noto_Sans_KR-Regular.otf");
+@import url("/static/font/Noto_Sans_KR/Noto_Sans_KR-Blod.otf");
+@import url("/static/font/Noto_Sans_KR/Noto_Sans_KR-Black.otf");
+
 .nav_main{
   color: white;
   font-size: 20px;
@@ -14,6 +19,15 @@ body{
   color: white;
 }
 
+.topic_main{
+  font-weight: bold;
+  font-family: "Noto_Sans_KR-Black"!important;
+}
+
+.topic_description{
+  font-family: "Noto_Sans_KR-Regular"!important;
+}
+
 #footer {
   border: 0px solid;
   text-align: center;
@@ -28,7 +42,12 @@ body{
 }
 
 .about_main{
+  font-family: "Noto_Sans_KR-Bold"!important;
   font-weight: bold;
+}
+
+.adout_description{
+  font-family: "Nanum_Gothic-Regular"!important;
 }
 
 .about_img{
