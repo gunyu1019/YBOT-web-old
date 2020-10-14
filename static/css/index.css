@@ -1,7 +1,22 @@
-@import url("/static/font/Nanum_Gothic/Nanum_Gothic-Regular.ttf");
-@import url("/static/font/Noto_Sans_KR/Noto_Sans_KR-Regular.otf");
-@import url("/static/font/Noto_Sans_KR/Noto_Sans_KR-Blod.otf");
-@import url("/static/font/Noto_Sans_KR/Noto_Sans_KR-Black.otf");
+@font-face{
+  font-family: "Nanum_Gothic-Regular";
+  src: url("/static/font/Nanum_Gothic/NanumGothic-Regular.ttf");
+}
+
+@font-face{
+  font-family: "Noto_Sans_KR-Regular";
+  src: url("/static/font/Noto_Sans_KR/NotoSansKR-Regular.otf");
+}
+
+@font-face{
+  font-family: "Noto_Sans_KR-Bold";
+  src: url("/static/font/Noto_Sans_KR/NotoSansKR-Bold.otf");
+}
+
+@font-face{
+  font-family: "Noto_Sans_KR-Black";
+  src: url("/static/font/Noto_Sans_KR/NotoSansKR-Black.otf");
+}
 
 .nav_main{
   color: white;
